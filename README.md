@@ -23,7 +23,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
 
 ### 可用源地址
 
-- [阿里云](http://mirrors.aliyun.com/pypi/simple/) - http://mirrors.aliyun.com/pypi/simple/
+- [阿里云](https://mirrors.aliyun.com/pypi/simple/) - https://mirrors.aliyun.com/pypi/simple/
 - [清华大学](https://pypi.tuna.tsinghua.edu.cn/simple) - https://pypi.tuna.tsinghua.edu.cn/simple
 - [中国科学技术大学](https://pypi.mirrors.ustc.edu.cn/simple/) - https://pypi.mirrors.ustc.edu.cn/simple/
 - [豆瓣](https://pypi.douban.com/simple) - https://pypi.douban.com/simple
@@ -160,8 +160,8 @@ git -C "$(brew --repo homebrew/cask)" remote set-url origin https://github.com/H
 | 清华 | core | https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git |
 | 清华 | cask | https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git |
 | 中科大 | brew | https://mirrors.ustc.edu.cn/brew.git |
-| 中科大  | core | http://mirrors.ustc.edu.cn/homebrew-core.git |
-| 中科大  | cask | http://mirrors.ustc.edu.cn/homebrew-cask.git |
+| 中科大  | core | https://mirrors.ustc.edu.cn/homebrew-core.git |
+| 中科大  | cask | https://mirrors.ustc.edu.cn/homebrew-cask.git |
 
 
 

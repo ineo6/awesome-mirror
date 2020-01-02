@@ -80,9 +80,9 @@ pod repo update
 新版的`CocoaPods`不允许用`pod repo add`直接添加`master`库了，但是依然可以通过下面方式：
 
 ```shell
-$ cd ~/.cocoapods/repos 
-$ pod repo remove master
-$ git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master
+cd ~/.cocoapods/repos 
+pod repo remove master
+git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master
 ```
 
 最后在`Podfile`第一行加上:

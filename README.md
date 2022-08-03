@@ -1,5 +1,38 @@
 # **Awesome Mirror** [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
+## nvm
+
+安装`nvm`：
+
+```sh
+export NVM_SOURCE=https://gitlab.com/mirrorx/nvm.git
+curl -o- https://gitlab.com/mirrorx/nvm/-/raw/master/install.sh | bash
+```
+
+设置`node`镜像：
+
+临时使用：
+```shell
+export NVM_NODEJS_ORG_MIRROR="https://npmmirror.com/mirrors/node"
+```
+
+更多内容请查看：[https://github.com/ineo6/nvm](https://github.com/ineo6/nvm)
+
+## Homebrew
+
+安装脚本：
+
+```shell
+/bin/bash -c "$(curl -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh)"
+```
+
+如果你已经安装好`brew`，只是想更换镜像，也可以访问下面的站点获取设置脚本。
+
+详细介绍&&帮助，请访问：
+
+- [https://brew.idayer.com/](https://brew.idayer.com/)
+- [https://zhuanlan.zhihu.com/p/90508170](https://zhuanlan.zhihu.com/p/90508170)
+
 ## pypi
 
 临时使用：
@@ -27,22 +60,6 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
 - [清华大学](https://pypi.tuna.tsinghua.edu.cn/simple) - https://pypi.tuna.tsinghua.edu.cn/simple
 - [中国科学技术大学](https://pypi.mirrors.ustc.edu.cn/simple/) - https://pypi.mirrors.ustc.edu.cn/simple/
 - [豆瓣](https://pypi.douban.com/simple) - https://pypi.douban.com/simple
-
-
-
-
-## nvm
-
-临时使用：
-```shell
-export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node/"
-```
-
-长期使用：
-
-```shell
-echo 'export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node/"' >> ~/.bashrc
-```
 
 ## Ruby Gems
 
@@ -127,70 +144,3 @@ PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub/" flutter packages
 ```shell
 echo 'export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub/"' >> ~/.bashrc
 ```
-
-## Homebrew
-
-### brew && core && cask
-
-设置镜像：
-```shell
-git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
-
-git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-
-git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
-```
-
-恢复官方：
-
-```shell
-git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git
-
-git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/Homebrew/homebrew-core.git
-
-git -C "$(brew --repo homebrew/cask)" remote set-url origin https://github.com/Homebrew/homebrew-cask.git
-```
-
-
-#### 可用源
-
-| 名称 | 类型 | 地址 |
-| --- | --- | --- |
-| 清华 | brew | https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git |
-| 清华 | core | https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git |
-| 清华 | cask | https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git |
-| 中科大 | brew | https://mirrors.ustc.edu.cn/brew.git |
-| 中科大  | core | https://mirrors.ustc.edu.cn/homebrew-core.git |
-| 中科大  | cask | https://mirrors.ustc.edu.cn/homebrew-cask.git |
-
-
-
-### Homebrew-bottles
-
-临时替换：
-```shell
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-```
-
-长期替换：
-```shell
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
-source ~/.bash_profile
-```
-
-#### 可用源
-
-- [中科大](https://mirrors.ustc.edu.cn/homebrew-bottles) - https://mirrors.ustc.edu.cn/homebrew-bottles
-- [清华](https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles) - https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-
-### homebrew-install
-
-解决`install`脚本无法访问问题，通过镜像加速脚本安装。
-
-使用方法和官方一致：
-
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install)"
-```
-
-具体食用说明[点此](http://idayer.com/mac-install-homebrew-by-cdn/)
